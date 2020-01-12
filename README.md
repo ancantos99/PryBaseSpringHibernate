@@ -10,10 +10,12 @@ se utiliza el patrón MVC para configurar la estructura de paquetes.
 | Paquete      | Descripción |
 | --------- | -----|
 | com.xxx.app.configuration  | Clases de configuración de la aplicación |
+| com.xxx.app.modelo     | Entidades de la base de datos |
 | com.xxx.app.negocio.repository     | Interfaces para definir la lógica de negocio |
 | com.xxx.app.negocio.repository.imp      | Implementación de la lógica de negocio |
 | com.xxx.app.negocio.services      | Clases para exponer los servicios implementados en el repository |
-| com.xxx.app.negocio.vista      |  Implementación de los Controladores. |
+| com.xxx.app.vista.controllers      |  Implementación de los Controladores. |
+| com.xxx.app.vista.resources.vo      | Clases de Transferencia de datos - DTO |
 
 ## Ambiente de Desarrollo
 - Spring Tool Suite 4
@@ -28,3 +30,11 @@ se utiliza el patrón MVC para configurar la estructura de paquetes.
 2. Ubicar el archivo lombok.jar donde se encuentra instalado el eclipse o Spring Tool Suite (mismo lugar donde se encuentra el archivo SpringToolSuite4.ini)
 3. Modificar el archivo SpringToolSuite4.ini y agregar la línea (sin espacios):
 `-javaagent:Ruta_instalacion_STSoEclipse\SpringToolSuite-4.5.0\lombok.jar`
+4. Agregar en el archivo pom.xml la dependencia de lombok
+```xml
+<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>			
+			<scope>provided</scope>
+		</dependency>
+```
