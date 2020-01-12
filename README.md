@@ -33,8 +33,8 @@ se utiliza el patrón MVC para configurar la estructura de paquetes.
 4. Agregar en el archivo pom.xml la dependencia de lombok
 ```xml
 <dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>			
-			<scope>provided</scope>
-		</dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>			
+    <scope>provided</scope>
+</dependency>
 ```
